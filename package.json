@@ -1,0 +1,61 @@
+{
+  "name": "ukraine-com-ua-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for adm.tools / ukraine.com.ua hosting, DNS, mail, database, domain and VPS API automation.",
+  "type": "module",
+  "bin": {
+    "ukraine-com-ua-mcp": "dist/src/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "scripts": {
+    "clean": "node -e \"const fs=require('node:fs');fs.rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/index.ts",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "model-context-protocol",
+    "mcp",
+    "mcp-server",
+    "adm.tools",
+    "admtools",
+    "adm-tools",
+    "ukraine.com.ua",
+    "ukraine-com-ua",
+    "hosting-api",
+    "hosting",
+    "dns",
+    "domain",
+    "mail",
+    "mysql",
+    "postgresql",
+    "vps",
+    "typescript"
+  ],
+  "homepage": "https://github.com/sanyo4ever/ukraine.com.ua-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanyo4ever/ukraine.com.ua-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sanyo4ever/ukraine.com.ua-mcp/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
